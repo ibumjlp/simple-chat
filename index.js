@@ -27,15 +27,21 @@ app.get('/', (req, res) => {
 
 io.on('connection', (socket) => {
     console.log('a user connected');
-    socket.broadcast.emit('hi');
+    // socket.broadcast.emit('hi');
+
+    socket.on('welcome', (msg) => {
+        const text = `${msg} joined.`;
+        io.emit('chat message', text);
+    });
 
     socket.on('disconnect', () => {
         console.log('user disconnected');
     });
 
     socket.on('chat message', (msg) => {
-        console.log('message: ' + msg);
-        io.emit('chat message', msg);
+        const input = JSON.parse(msg);
+        const text = `<b>${input.user} :</b> ${input.text}`
+        io.emit('chat message', text);
     });
 });
 
