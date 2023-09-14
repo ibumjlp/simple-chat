@@ -1,6 +1,6 @@
 # simple-chat
 
-Simple chat is a project for learning the fundamentals of WebSocket and Socket.io. You can practice and gain an understanding of how these technologies work at [Socket.IO]([https://socket.io/)https://socket.io])
+Simple chat is a project for learning the fundamentals of WebSocket and Socket.io. You can practice and gain an understanding of how these technologies work at [Socket.IO](https://socket.io/)https://socket.io)
 
 Writing a chat application with popular web applications stacks like LAMP (PHP) has normally been very hard. It involves polling the server for changes, keeping track of timestamps, and it’s a lot slower than it should be.
 
